@@ -2,6 +2,8 @@
 
 A modern, full-featured e-commerce application built with React, Redux Toolkit, and React Query. This project demonstrates advanced React concepts including state management, asynchronous data fetching, routing, and session persistence.
 
+🔗 **Live Demo:** [View Project](https://github.com/yousafzeb-byte/advanced-ecommerce-app)
+
 ## 🚀 Features
 
 ### Product Catalog
