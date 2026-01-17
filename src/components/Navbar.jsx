@@ -11,12 +11,12 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <span className="logo-spark">✱</span>
-          <span className="logo-text">Walmart</span>
+          <span className="logo-text">E-Shop</span>
         </Link>
         <div className="navbar-search">
           <input
             type="text"
-            placeholder="Search everything at Walmart online and in store"
+            placeholder="Search everything online and in store"
           />
           <button className="search-btn">🔍</button>
         </div>
