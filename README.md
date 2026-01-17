@@ -210,6 +210,8 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
+**Yousaf Zeb**
+
 Built as a learning project to demonstrate advanced React concepts.
 
 ## 🙏 Acknowledgments
