@@ -1,0 +1,132 @@
+.home-container {
+  padding: 20px 0;
+}
+
+.home-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  color: #646cff;
+  margin: 0;
+}
+
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-filter label {
+  font-weight: 500;
+}
+
+.category-filter select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-width: 200px;
+}
+
+.category-filter select:hover {
+  border-color: #646cff;
+}
+
+.category-filter select:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+.spinner {
+  border: 4px solid rgba(100, 108, 255, 0.1);
+  border-top: 4px solid #646cff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba(255, 68, 68, 0.1);
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.error-container h2 {
+  color: #ff4444;
+  margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .category-filter select {
+    background-color: #ffffff;
+    color: #213547;
+  }
+
+  .home-header h1 {
+    color: #535bf2;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .category-filter {
+    width: 100%;
+  }
+
+  .category-filter select {
+    flex: 1;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
