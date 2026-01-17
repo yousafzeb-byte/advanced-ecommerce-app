@@ -1,28 +1,36 @@
 :root {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: "Bogle", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color-scheme: light;
+  color: #2e2f32;
+  background: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  /* Custom CSS Variables */
-  --primary-color: #667eea;
-  --primary-dark: #5568d3;
-  --secondary-color: #764ba2;
-  --accent-color: #f093fb;
+
+  /* Walmart CSS Variables */
+  --walmart-blue: #0071ce;
+  --walmart-blue-dark: #004f9a;
+  --walmart-yellow: #ffc220;
+  --walmart-dark-yellow: #f2a900;
+  --walmart-dark: #041e42;
+  --walmart-gray: #74767b;
+  --walmart-light-gray: #e6e6e6;
+  --primary-color: #0071ce;
+  --primary-dark: #004f9a;
+  --secondary-color: #ffc220;
+  --accent-color: #f2a900;
   --success-color: #10b981;
   --danger-color: #ef4444;
-  --text-primary: rgba(255, 255, 255, 0.95);
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #2e2f32;
+  --text-secondary: #74767b;
+  --card-bg: #ffffff;
+  --card-border: #e6e6e6;
+  --bg-light: #f2f8fd;
 }
 
 * {
@@ -36,75 +44,39 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
-  background-attachment: fixed;
+  background: #ffffff;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--walmart-blue);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: var(--walmart-blue-dark);
 }
 
 button {
-  border-radius: 12px;
+  border-radius: 24px;
   border: 1px solid transparent;
   padding: 0.7em 1.5em;
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: var(--walmart-blue);
   color: white;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.5s;
-}
-
-button:hover::before {
-  left: 100%;
+  transition: all 0.2s ease;
+  box-shadow: none;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  background: var(--walmart-blue-dark);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid var(--walmart-blue);
+  outline-offset: 2px;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #1e293b;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-border: rgba(0, 0, 0, 0.1);
-  }
-  
-  a:hover {
-    color: #667eea;
-  }
-  
-  body {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
-    background-attachment: fixed;
