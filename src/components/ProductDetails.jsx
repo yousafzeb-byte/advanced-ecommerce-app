@@ -64,7 +64,7 @@ function ProductDetails() {
     return (
       <div className="product-details-error">
         <h2>Product Not Found</h2>
-        <p>Sorry, we couldn't find the product you're looking for.</p>
+        <p>Sorry, we couldn&apos;t find the product you&apos;re looking for.</p>
         <button onClick={() => navigate("/")}>Back to Products</button>
       </div>
     );

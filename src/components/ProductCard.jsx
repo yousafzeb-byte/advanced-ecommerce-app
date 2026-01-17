@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./ProductCard.css";
 
 function ProductCard({ product, onAddToCart }) {
@@ -67,5 +68,21 @@ function ProductCard({ product, onAddToCart }) {
     </div>
   );
 }
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    image: PropTypes.string,
+    rating: PropTypes.shape({
+      rate: PropTypes.number,
+      count: PropTypes.number,
+    }),
+  }).isRequired,
+  onAddToCart: PropTypes.func.isRequired,
+};
 
 export default ProductCard;
