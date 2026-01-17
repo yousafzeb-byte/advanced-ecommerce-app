@@ -5,17 +5,20 @@
 ### 1. Product Catalog ✓
 
 #### Product Listing and Display ✓
+
 - ✅ Uses React Query to retrieve all products from FakeStore API
 - ✅ Displays on Home component
 - ✅ Shows: title, price, category, description, rate, and image
 - ✅ Each product has "Add to Cart" button
 - ✅ Implements fallback for 404 image errors using placeholder images
 
-**Files**: 
+**Files**:
+
 - [Home.jsx](src/components/Home.jsx)
 - [ProductCard.jsx](src/components/ProductCard.jsx)
 
 #### Category Navigation ✓
+
 - ✅ Select dropdown for category selection
 - ✅ Uses React Query to fetch categories from API
 - ✅ Dynamically populated (not hardcoded)
@@ -29,16 +32,19 @@
 ### 2. Shopping Cart ✓
 
 #### State Management with Redux Toolkit ✓
+
 - ✅ Redux Toolkit manages shopping cart state
 - ✅ Actions: addToCart, removeFromCart, updateQuantity, clearCart
 - ✅ Reducers handle all cart state changes
 - ✅ Selectors for cart items, total, and item count
 
 **Files**:
+
 - [store.js](src/store/store.js) - Redux store configuration
 - [cartSlice.js](src/store/cartSlice.js) - Cart reducers and actions
 
 #### Shopping Cart Component ✓
+
 - ✅ View and manage cart products
 - ✅ Displays: title, image, count, and price for each product
 - ✅ Remove button for each product
@@ -47,6 +53,7 @@
 **File**: [Cart.jsx](src/components/Cart.jsx)
 
 #### Session Storage for Shopping Cart ✓
+
 - ✅ Cart data stored in sessionStorage
 - ✅ Persists across components and browser sessions
 - ✅ Stored as array of product objects
@@ -55,6 +62,7 @@
 **Implementation**: sessionStorage integration in [cartSlice.js](src/store/cartSlice.js#L4-L26)
 
 #### Total Amount and Price Calculation ✓
+
 - ✅ Displays total number of products
 - ✅ Displays total price
 - ✅ Updates dynamically with cart changes
@@ -63,6 +71,7 @@
 **Implementation**: Selectors in [cartSlice.js](src/store/cartSlice.js#L53-L58)
 
 #### Checkout Functionality ✓
+
 - ✅ Checkout feature implemented
 - ✅ Clears Redux state
 - ✅ Clears sessionStorage
@@ -75,11 +84,13 @@
 ### 3. GitHub Repository ✓
 
 #### Git Setup ✓
+
 - ✅ GitHub repository created
 - ✅ Regular commits (3 commits so far)
 - ✅ Clean commit messages
 
 #### Documentation ✓
+
 - ✅ Interactive README.md with:
   - Setup instructions
   - Feature explanations
@@ -92,6 +103,7 @@
   - DEPLOYMENT.md - Deployment instructions
 
 **Files**:
+
 - [README.md](README.md)
 - [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
 - [DEPLOYMENT.md](DEPLOYMENT.md)
@@ -101,18 +113,21 @@
 ## 🎯 Technical Implementation
 
 ### React Query Usage
+
 - Used for all API calls (products, categories, filtered products)
 - Automatic caching and stale data management
 - Loading and error state handling
 - Query keys for proper cache invalidation
 
 ### Redux Toolkit Implementation
+
 - Centralized cart state management
 - Immutable state updates with Immer
 - Action creators automatically generated
 - Memoized selectors for performance
 
 ### Component Architecture
+
 ```
 App (Router Provider)
 ├── Navbar (Cart Badge)
@@ -124,6 +139,7 @@ App (Router Provider)
 ```
 
 ### State Flow
+
 ```
 User Action → Redux Action → Reducer → sessionStorage → Component Re-render
 API Request → React Query → Cache → Component Render
@@ -134,6 +150,7 @@ API Request → React Query → Cache → Component Render
 ## 📦 Dependencies Installed
 
 ### Core Dependencies
+
 - `react` (18.2.0) - UI library
 - `react-dom` (18.2.0) - React DOM renderer
 - `@reduxjs/toolkit` (2.0.1) - State management
@@ -142,6 +159,7 @@ API Request → React Query → Cache → Component Render
 - `react-router-dom` (6.21.1) - Routing
 
 ### Dev Dependencies
+
 - `vite` (5.0.8) - Build tool
 - `@vitejs/plugin-react` (4.2.1) - React plugin for Vite
 - `eslint` (8.55.0) - Linting
@@ -151,6 +169,7 @@ API Request → React Query → Cache → Component Render
 ## 🎨 Features Implemented
 
 ### User Experience
+
 - ✅ Responsive design (mobile, tablet, desktop)
 - ✅ Loading spinners
 - ✅ Error handling
@@ -160,12 +179,14 @@ API Request → React Query → Cache → Component Render
 - ✅ Cart badge with item count
 
 ### Performance
+
 - ✅ React Query caching (5 min stale time)
 - ✅ Optimized re-renders with Redux selectors
 - ✅ Lazy loading considerations
 - ✅ Production build optimization
 
 ### Accessibility
+
 - ✅ Semantic HTML
 - ✅ ARIA labels on buttons
 - ✅ Keyboard navigation support
@@ -176,13 +197,16 @@ API Request → React Query → Cache → Component Render
 ## 🚀 Running the Application
 
 ### Development
+
 ```bash
 npm install
 npm run dev
 ```
+
 Visit: http://localhost:5173
 
 ### Production Build
+
 ```bash
 npm run build
 npm run preview
@@ -243,19 +267,23 @@ npm run preview
 ## 🎓 Key Concepts Demonstrated
 
 1. **React Query vs Redux**
+
    - React Query for server state (API data)
    - Redux for client state (shopping cart)
 
 2. **State Persistence**
+
    - sessionStorage for cart data
    - Automatic sync on state changes
 
 3. **Error Handling**
+
    - API errors with user-friendly messages
    - Image loading fallbacks
    - Loading states
 
 4. **Performance Optimization**
+
    - Memoized selectors
    - Query caching
    - Efficient re-renders
@@ -270,12 +298,14 @@ npm run preview
 ## 🎯 Project Status: COMPLETE ✅
 
 All requirements have been successfully implemented and tested. The application is ready for:
+
 - Development testing
 - Production deployment
 - Further feature additions
 - Code review
 
 **Next Steps**:
+
 1. Push to GitHub
 2. Deploy to hosting platform (Vercel/Netlify)
 3. Share live demo link
