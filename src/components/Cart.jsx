@@ -49,7 +49,7 @@ function Cart() {
     return (
       <div className="checkout-success">
         <div className="success-icon">✓</div>
-        <h2>Order Placed Successfully!</h2>
+        <h2>🎉 Order Placed Successfully!</h2>
         <p>Thank you for your purchase. Your cart has been cleared.</p>
       </div>
     );
@@ -60,14 +60,14 @@ function Cart() {
       <div className="empty-cart">
         <div className="empty-cart-icon">🛒</div>
         <h2>Your cart is empty</h2>
-        <p>Add some products to get started!</p>
+        <p>Add some amazing products to get started!</p>
       </div>
     );
   }
 
   return (
     <div className="cart-container">
-      <h1>Shopping Cart</h1>
+      <h1>🛒 Shopping Cart</h1>
 
       <div className="cart-summary">
         <p>

@@ -34,8 +34,8 @@ function ProductCard({ product, onAddToCart }) {
         />
       </div>
       <div className="product-details">
-        <h3 className="product-title">{product.title}</h3>
         <p className="product-category">{product.category}</p>
+        <h3 className="product-title">{product.title}</h3>
         <p className="product-description">{product.description}</p>
         <div className="product-rating">
           <span className="rating-stars">
@@ -52,7 +52,7 @@ function ProductCard({ product, onAddToCart }) {
             onClick={handleAddToCart}
             disabled={isAdding}
           >
-            {isAdding ? "✓ Added" : "Add to Cart"}
+            {isAdding ? "✓ Added!" : "🛒 Add to Cart"}
           </button>
         </div>
       </div>
