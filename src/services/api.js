@@ -26,3 +26,12 @@ export const fetchProductsByCategory = async (category) => {
   }
   return response.json();
 };
+
+// Fetch product by ID
+export const fetchProductById = async (id) => {
+  const response = await fetch(`${API_BASE_URL}/products/${id}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch product with ID: ${id}`);
+  }
+  return response.json();
+};

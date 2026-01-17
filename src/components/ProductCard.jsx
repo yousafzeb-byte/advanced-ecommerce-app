@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({ product, onAddToCart }) {
+  const navigate = useNavigate();
   const [imageError, setImageError] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
 
@@ -24,7 +26,10 @@ function ProductCard({ product, onAddToCart }) {
   )}`;
 
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={() => navigate(`/product/${product.id}`)}
+    >
       <div className="product-image-container">
         <img
           src={imageError ? placeholderImage : product.image}
@@ -49,7 +54,10 @@ function ProductCard({ product, onAddToCart }) {
           <span className="product-price">${product.price.toFixed(2)}</span>
           <button
             className={`add-to-cart-btn ${isAdding ? "adding" : ""}`}
-            onClick={handleAddToCart}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAddToCart();
+            }}
             disabled={isAdding}
           >
             {isAdding ? "✓ Added!" : "🛒 Add to Cart"}

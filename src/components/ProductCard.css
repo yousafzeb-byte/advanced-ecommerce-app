@@ -11,6 +11,7 @@
   flex-direction: column;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .product-card::before {

@@ -70,7 +70,11 @@
 .cart-item-image {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 147, 251, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(240, 147, 251, 0.1) 100%
+  );
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -387,7 +391,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
