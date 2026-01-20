@@ -34,12 +34,13 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const product = action.payload;
+      const quantityToAdd = product.quantity || 1;
       const existingItem = state.items.find((item) => item.id === product.id);
 
       if (existingItem) {
-        existingItem.count += 1;
+        existingItem.count += quantityToAdd;
       } else {
-        state.items.push({ ...product, count: 1 });
+        state.items.push({ ...product, count: quantityToAdd });
       }
 
       saveCartToStorage(state.items);

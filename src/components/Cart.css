@@ -93,6 +93,32 @@
   align-items: flex-end;
 }
 
+.cart-item-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  min-width: 120px;
+}
+
+.item-price {
+  font-size: 0.813rem;
+  color: #74767b;
+  font-weight: 400;
+}
+
+.item-price::before {
+  content: "@ ";
+  color: #74767b;
+}
+
+.item-subtotal {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #0071ce;
+  letter-spacing: -0.02em;
+}
+
 .quantity-control {
   display: flex;
   align-items: center;

@@ -32,9 +32,7 @@ function ProductDetails() {
 
   const handleAddToCart = () => {
     setIsAdding(true);
-    for (let i = 0; i < quantity; i++) {
-      dispatch(addToCart(product));
-    }
+    dispatch(addToCart({ ...product, quantity }));
 
     setTimeout(() => {
       setIsAdding(false);
@@ -47,7 +45,7 @@ function ProductDetails() {
 
   const getPlaceholderImage = () => {
     return `https://via.placeholder.com/600x600/6366f1/ffffff?text=${encodeURIComponent(
-      product?.title.substring(0, 20) || "Product"
+      product?.title.substring(0, 20) || "Product",
     )}`;
   };
 
