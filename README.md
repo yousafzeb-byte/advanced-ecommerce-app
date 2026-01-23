@@ -1,6 +1,6 @@
 # Advanced E-Commerce Web Application
 
-A modern, full-featured e-commerce application built with React, Redux Toolkit, and React Query. This project demonstrates advanced React concepts including state management, asynchronous data fetching, routing, and session persistence.
+A modern, full-featured e-commerce application built with React, Redux Toolkit, Firebase, and React Query. This project demonstrates advanced React concepts including state management, asynchronous data fetching, routing, session persistence, and Firebase backend integration.
 
 🔗 **Live Demo:** [View Project](https://github.com/yousafzeb-byte/advanced-ecommerce-app)
 
@@ -8,7 +8,7 @@ A modern, full-featured e-commerce application built with React, Redux Toolkit, 
 
 ### Product Catalog
 
-- **Dynamic Product Listing**: Fetches and displays all products from the FakeStore API
+- **Dynamic Product Listing**: Fetches and displays all products from Firebase Firestore
 - **Product Information**: Shows title, price, category, description, rating, and images
 - **Image Fallback**: Handles broken image URLs with placeholder images
 - **Category Navigation**: Dynamic dropdown populated from API categories
@@ -40,7 +40,8 @@ A modern, full-featured e-commerce application built with React, Redux Toolkit, 
 - **React Router DOM** - Client-side routing
 - **Vite** - Fast build tool and development server
 - **CSS3** - Custom styling with responsive design
-- **FakeStore API** - Mock e-commerce data source
+- **Firebase** - Backend services (Firestore, Authentication)
+- **TypeScript** - Type-safe backend and services
 
 ## 📋 Prerequisites
 
@@ -61,6 +62,19 @@ Before running this application, make sure you have the following installed:
 2. **Install dependencies**
    ```bash
    npm install
+   ```
+
+3. **Configure Firebase**
+   
+   Create a `.env` file in the root directory with your Firebase configuration:
+   
+   ```env
+   VITE_FIREBASE_API_KEY=your_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
    ```
 
 ## 🚀 Running the Application
@@ -90,7 +104,13 @@ Advanced React E-Commerce Web App/
 │   │   ├── Navbar.jsx            # Navigation bar with cart badge
 │   │   └── Navbar.css
 │   ├── services/
-│   │   └── api.js                # API service functions
+│   │   ├── api.js                # API service functions
+│   │   ├── authService.ts        # Firebase authentication service
+│   │   ├── productService.ts     # Firebase product service
+│   │   ├── orderService.ts       # Firebase order service
+│   │   └── userService.ts        # Firebase user service
+│   ├── config/
+│   │   └── firebase.ts           # Firebase configuration
 │   ├── store/
 │   │   ├── store.js              # Redux store configuration
 │   │   └── cartSlice.js          # Cart reducer and actions
@@ -131,13 +151,14 @@ Cart data persists across browser sessions:
 - Cart is loaded from sessionStorage on app initialization
 - Survives page refreshes and tab closures (within the same session)
 
-### API Integration
+### Firebase Integration
 
-All data is fetched from the FakeStore API:
+Backend powered by Firebase:
 
-- `GET /products` - All products
-- `GET /products/categories` - All categories
-- `GET /products/category/{category}` - Products by category
+- **Firestore Database** - Product catalog, user data, and orders
+- **Firebase Authentication** - User authentication and authorization
+- **Real-time Updates** - Live data synchronization
+- **Cloud Functions** - Serverless backend logic
 
 ## 🎨 Styling
 
@@ -197,10 +218,12 @@ This project demonstrates:
 - ✅ Responsive web design
 - ✅ Error handling and loading states
 - ✅ Modern React patterns and best practices
+- ✅ Firebase backend integration
+- ✅ TypeScript for type safety
 
 ## 🐛 Known Issues
 
-- Some product images from the FakeStore API may fail to load (404 errors). The application gracefully handles this by displaying placeholder images.
+- Product images may fail to load if URLs are broken. The application gracefully handles this by displaying placeholder images.
 
 ## 🤝 Contributing
 
@@ -218,6 +241,6 @@ Built as a learning project to demonstrate advanced React concepts.
 
 ## 🙏 Acknowledgments
 
-- [FakeStore API](https://fakestoreapi.com/) for providing the mock e-commerce data
+- [Firebase](https://firebase.google.com/) for providing the backend infrastructure
 - React, Redux, and React Query teams for excellent documentation
 - Vite team for the amazing build tool
