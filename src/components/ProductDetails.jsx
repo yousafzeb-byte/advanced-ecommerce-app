@@ -3,15 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { addToCart } from "../store/cartSlice";
+import { fetchProductById } from "../services/api";
 import "./ProductDetails.css";
-
-const fetchProductById = async (id) => {
-  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch product");
-  }
-  return response.json();
-};
 
 function ProductDetails() {
   const { id } = useParams();
@@ -96,11 +89,11 @@ function ProductDetails() {
 
           <div className="product-rating-section">
             <div className="rating-stars">
-              {"⭐".repeat(Math.round(product.rating?.rate || 0))}
-              {"☆".repeat(5 - Math.round(product.rating?.rate || 0))}
+              {"⭐".repeat(Math.round(product.rating?.rate || 4))}
+              {"☆".repeat(5 - Math.round(product.rating?.rate || 4))}
             </div>
             <span className="rating-text">
-              {product.rating?.rate || "N/A"} ({product.rating?.count || 0}{" "}
+              {product.rating?.rate || 4.0} ({product.rating?.count || 0}{" "}
               reviews)
             </span>
           </div>

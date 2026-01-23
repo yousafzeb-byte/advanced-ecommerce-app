@@ -1,37 +1,51 @@
-const API_BASE_URL = "https://fakestoreapi.com";
+import { getAllProducts, getProductById } from "./productService";
 
-// Fetch all products
+// Fetch all products from Firebase
 export const fetchProducts = async () => {
-  const response = await fetch(`${API_BASE_URL}/products`);
-  if (!response.ok) {
+  try {
+    const products = await getAllProducts();
+    return products;
+  } catch (error) {
+    console.error("Failed to fetch products:", error);
     throw new Error("Failed to fetch products");
   }
-  return response.json();
 };
 
-// Fetch all categories
+// Fetch all categories (extract unique categories from products)
 export const fetchCategories = async () => {
-  const response = await fetch(`${API_BASE_URL}/products/categories`);
-  if (!response.ok) {
+  try {
+    const products = await getAllProducts();
+    const categories = [
+      ...new Set(products.map((product) => product.category)),
+    ];
+    return categories;
+  } catch (error) {
+    console.error("Failed to fetch categories:", error);
     throw new Error("Failed to fetch categories");
   }
-  return response.json();
 };
 
 // Fetch products by category
 export const fetchProductsByCategory = async (category) => {
-  const response = await fetch(`${API_BASE_URL}/products/category/${category}`);
-  if (!response.ok) {
+  try {
+    const products = await getAllProducts();
+    return products.filter((product) => product.category === category);
+  } catch (error) {
+    console.error(`Failed to fetch products for category: ${category}`, error);
     throw new Error(`Failed to fetch products for category: ${category}`);
   }
-  return response.json();
 };
 
 // Fetch product by ID
 export const fetchProductById = async (id) => {
-  const response = await fetch(`${API_BASE_URL}/products/${id}`);
-  if (!response.ok) {
+  try {
+    const product = await getProductById(id);
+    if (!product) {
+      throw new Error(`Product with ID ${id} not found`);
+    }
+    return product;
+  } catch (error) {
+    console.error(`Failed to fetch product with ID: ${id}`, error);
     throw new Error(`Failed to fetch product with ID: ${id}`);
   }
-  return response.json();
 };
