@@ -41,3 +41,4 @@ ui-debug.log
 *.mov
 *.avi
 ScreenRec*.mp4
+.vercel
