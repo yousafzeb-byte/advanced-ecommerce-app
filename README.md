@@ -2,7 +2,7 @@
 
 A modern, full-featured e-commerce application built with React, Redux Toolkit, Firebase, and React Query. This project demonstrates advanced React concepts including state management, asynchronous data fetching, routing, session persistence, Firebase backend integration, and a robust CI/CD pipeline with comprehensive test coverage.
 
-🔗 **Live Demo:** [Your Vercel Deployment URL]
+🔗 **Live Demo:** [https://e-commerce-product-listing-app.vercel.app](https://e-commerce-product-listing-app.vercel.app)
 📦 **GitHub Repository:** [View Source Code](https://github.com/yousafzeb-byte/advanced-ecommerce-app)
 🚀 **CI/CD Status:** ![CI/CD Pipeline](https://github.com/yousafzeb-byte/advanced-ecommerce-app/actions/workflows/main.yml/badge.svg)
 
