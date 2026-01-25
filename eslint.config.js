@@ -5,7 +5,15 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 
 export default [
-  { ignores: ["dist", "add50Products.js", "bulkAddProducts.js", "setup.js"] },
+  {
+    ignores: [
+      "dist",
+      "**/add50Products.js",
+      "**/bulkAddProducts.js",
+      "**/setup.js",
+      "**/*.config.js",
+    ],
+  },
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
