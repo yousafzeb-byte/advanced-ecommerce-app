@@ -414,7 +414,7 @@ This project demonstrates:
 
 ## 🔗 Important Links
 
-- **Live Application**: [Your Vercel URL Here]
+- **Live Application**: https://e-commerce-product-listing-app.vercel.app
 - **GitHub Repository**: https://github.com/yousafzeb-byte/advanced-ecommerce-app
 - **CI/CD Setup Guide**: [CICD_SETUP.md](CICD_SETUP.md)
 - **GitHub Actions**: [View Workflows](https://github.com/yousafzeb-byte/advanced-ecommerce-app/actions)
