@@ -6,6 +6,23 @@ A modern, full-featured e-commerce application built with React, Redux Toolkit, 
 📦 **GitHub Repository:** [View Source Code](https://github.com/yousafzeb-byte/advanced-ecommerce-app)
 🚀 **CI/CD Status:** ![CI/CD Pipeline](https://github.com/yousafzeb-byte/advanced-ecommerce-app/actions/workflows/main.yml/badge.svg)
 
+## Recruiter Snapshot
+
+- Built a production-style React commerce app with Redux Toolkit, React Query, Firebase, and route-based UX flows.
+- Implemented CI/CD with automated checks and deployment to Vercel.
+- Added test coverage for key UI and integration behaviors (22 passing tests).
+- Demonstrated scalable front-end patterns: feature components, state slices, and service modules.
+
+## Visual Showcase
+
+Add screenshots and short GIFs under `docs/media/` to highlight important user flows.
+
+```md
+![Product Listing](docs/media/product-listing.png)
+![Shopping Cart](docs/media/shopping-cart.png)
+![Checkout Flow](docs/media/checkout-flow.gif)
+```
+
 ## 🚀 Features
 
 ### Product Catalog
@@ -173,8 +190,8 @@ Before running this application, make sure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repository-url>
-   cd "Advanced React E-Commerce Web App"
+   git clone https://github.com/yousafzeb-byte/advanced-ecommerce-app.git
+   cd advanced-ecommerce-app
    ```
 
 2. **Install dependencies**
